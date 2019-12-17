@@ -12,12 +12,13 @@ func TestAddress_get_with_name(t *testing.T) {
 		if err!=nil{
 			return err
 		}
-		addr,err:=Address_get_with_name("pppoe-out1",roscli)
+		r,err:= Interface_get_with_params(Rosparam{
+			"?=running":"true",
+		},roscli)
 		if err!=nil{
 			return err
 		}
-		fmt.Println(addr.Map["address"])
-
+		fmt.Println(r)
 		return nil
 	}()
 	if err!=nil{
