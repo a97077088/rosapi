@@ -195,6 +195,16 @@ func Interface_set_with_params(params map[string]interface{},ros *routeros.Clien
 	}
 	return nil
 }
+//Interface,参数numbers=接口名字
+func Pppoe_set_with_params(params map[string]interface{},ros *routeros.Client)error{
+	cmd:=[]string{"/interface/pppoe-client/set"}
+	cmd=append(cmd,Parse_param(params)...)
+	_,err:=ros.Run(cmd...)
+	if err!=nil{
+		return err
+	}
+	return nil
+}
 
 //获取id
 func ReId(re *proto.Sentence)string{
