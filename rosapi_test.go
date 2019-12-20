@@ -15,7 +15,7 @@ func TestAddress_get_with_name(t *testing.T) {
 		for i:=1;i<=100;i++{
 			err= Pppoe_set_with_params(Rosparam{
 				Id:fmt.Sprintf("pppoe-out%d",i),
-				Use_peer_dns:YES,
+				Use_peer_dns:No,
 			},roscli)
 			if err!=nil{
 				return err
