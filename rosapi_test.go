@@ -22,7 +22,7 @@ func Test_exportaddress(t *testing.T) {
 			if err!=nil{
 				return err
 			}
-			fmt.Println(strings.ReplaceAll(r.Map["address"],"/32",""))
+			fmt.Println(strings.ReplaceAll(r.Map["address"],"/32","----3000----null----null"))
 		}
 		return nil
 	}()
