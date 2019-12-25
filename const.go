@@ -1,4 +1,4 @@
-package main
+package rosapi
 
 const(
 	Dst_address="dst-address"
