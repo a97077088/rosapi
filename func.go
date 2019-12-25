@@ -22,10 +22,13 @@ func Parse_rawparam(rosparam Rosparam)[]string{
 	r:=make([]string,0)
 	for k,v:=range rosparam{
 		cmp:=""
+		itr:=""
 		if v!=nil{
 			cmp="="
+			itr=fmt.Sprintf("%s%s%v",k,cmp,v,)
+		}else{
+			itr=fmt.Sprintf("%s",k,)
 		}
-		itr:=fmt.Sprintf("%s%s%v",k,cmp,v,)
 		r=append(r,itr)
 	}
 	return r
