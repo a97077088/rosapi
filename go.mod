@@ -1,4 +1,4 @@
-module approsmgr
+module github.com/a97077088/rosapi
 
 go 1.13
 
